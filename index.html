@@ -1,760 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ritesh yadav</title>
+  <title>Ritesh Yadav · AI &amp; Backend Engineer</title>
+  <meta name="description" content="Ritesh Yadav is a software engineer who builds LLM products end to end: LangGraph agents, RAG pipelines, FastAPI services and React/Next.js interfaces.">
+  <meta name="theme-color" content="#07080d">
+  <meta property="og:title" content="Ritesh Yadav · AI &amp; Backend Engineer">
+  <meta property="og:description" content="LangGraph agents, RAG pipelines, FastAPI services and React/Next.js interfaces.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/images/my-avatar.png">
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
+  <link rel="icon" href="./assets/images/logo.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <script>
+    // Apply the saved theme before first paint to avoid a flash
+    try {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+    document.documentElement.classList.add('js');
+  </script>
 </head>
 
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-  <!--
-    - #MAIN
-  -->
+  <!-- ============ NAV ============ -->
+  <header class="nav" data-nav>
+    <a href="#top" class="nav-logo" aria-label="Back to top">
+      <span class="logo-mark">RY</span>
+      <span class="logo-text">Ritesh<span class="accent">.</span></span>
+    </a>
 
-  <main>
+    <nav class="nav-links" data-nav-links>
+      <a href="#about" data-link>About</a>
+      <a href="#agent" data-link>How I build</a>
+      <a href="#experience" data-link>Experience</a>
+      <a href="#projects" data-link>Projects</a>
+      <a href="#skills" data-link>Skills</a>
+      <a href="#contact" data-link>Contact</a>
+    </nav>
 
-    <!--
-      - #SIDEBAR
-    -->
+    <div class="nav-actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle light and dark theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+      </button>
+      <a class="btn btn-small btn-primary nav-resume" href="./assets/Ritesh-Yadav-Resume.pdf" download>Resume</a>
+      <button class="icon-btn menu-btn" type="button" data-menu-btn aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-    <aside class="sidebar" data-sidebar>
+  <main id="top">
 
-      <div class="sidebar-info">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <canvas class="hero-canvas" data-network aria-hidden="true"></canvas>
+      <div class="hero-orb orb-1" aria-hidden="true"></div>
+      <div class="hero-orb orb-2" aria-hidden="true"></div>
 
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="status-pill reveal">
+            <span class="pulse-dot"></span>
+            Open to work · available immediately
+          </p>
 
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Ritesh Yadav</h1>
+          <h1 class="hero-title reveal">
+            Hi, I'm <span class="gradient-text">Ritesh Yadav</span>
+          </h1>
 
-          <p class="title">Software Engineer</p>
-        </div>
+          <p class="hero-role reveal">
+            I build
+            <span class="typed" data-typed
+              data-words='["AI agents with LangGraph","RAG systems that cite their sources","FastAPI backends","full-stack products in React & Next.js"]'>AI agents with LangGraph</span><span class="caret" aria-hidden="true"></span>
+          </p>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+          <p class="hero-lead reveal">
+            Software engineer focused on <strong>AI &amp; backend</strong>. I take LLM products from idea to
+            production: the agents, the retrieval, the APIs and the interface people actually use.
+          </p>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:riteshyad672@gmail.com" class="contact-link">riteshyad672@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+919664412018" class="contact-link">+91 9664412018</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="2004-08-10">August 10, 2004</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Bengaluru , India</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/ritesh-yadav-13620825b/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
+          <div class="hero-cta reveal">
+            <a href="#projects" class="btn btn-primary magnetic">
+              View my work
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/Ritesh672" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
+            <a href="./assets/Ritesh-Yadav-Resume.pdf" class="btn btn-ghost magnetic" download>
+              Download resume
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
             </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.instagram.com/riteshyad96/" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://leetcode.com/u/Riteshyad962/" class="social-link social-link-text">
-              <span>LC</span>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Skills</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-       <section class="about-text">
-
-              <p>
-                I am a full-stack developer focused on building scalable web applications, analytics dashboards, and production-ready APIs.
-                I enjoy turning business problems into fast, maintainable products with clean architecture and thoughtful user experiences.
-              </p>
-
-              <p>
-                My current stack includes React.js, Next.js, Node.js, Express.js, Flask APIs, PostgreSQL, MongoDB, Redis, and modern deployment tools.
-                I have worked across frontend, backend, database design, authentication, API optimization, and performance-focused product delivery.
-              </p>
-        </section>
-
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/software-developement.png" alt="Software icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Software Development</h4>
-
-                <p class="service-item-text">
-                  Building scalable and efficient software solutions with clean, maintainable code.
-                </p>
-              </div>
-
-           </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            
-
-            <li class="service-item">
-
-                <div class="service-icon-box">
-                  <img src="./assets/images/desing.png" alt="Architecture icon" width="40">
-                </div>
-
-                <div class="service-content-box">
-
-                  <h4 class="h4 service-item-title">System Design & Architecture</h4>
-                  <p class="service-item-text">
-                    Designing robust system architectures, APIs, and databases for large-scale applications.
-                  </p>
-            
-                </div>
-
-            </li>
-
-            <li class="service-item">
-
-                  <div class="service-icon-box">
-                    <img src="./assets/images/machine-learning.png" alt="AI icon" width="40">
-                  </div>
-
-                  <div class="service-content-box">
-
-                    <h4 class="h4 service-item-title">Machine Learning</h4>
-                    <p class="service-item-text">
-                      Developing intelligent applications and integrating AI solutions into real-world projects.
-                    </p>
-
-                  </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-              <header class="resume-header">
-                <h2 class="h2 article-title">Resume</h2>
-                <a class="resume-download" href="./assets/Ritesh-Yadav-Resume.pdf" download>
-                  <ion-icon name="download-outline"></ion-icon>
-                  <span>Download Resume</span>
-                </a>
-              </header>
-
-              <!-- Experience Section -->
-              <section class="timeline">
-
-                <div class="title-wrapper">
-                  <div class="icon-box">
-                    <ion-icon name="briefcase-outline"></ion-icon>
-                  </div>
-                  <h3 class="h3">Experience</h3>
-                </div>
-
-                <ol class="timeline-list">
-
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">Full-Stack Developer Intern - RD Group of Industries</h4>
-                    <span>Mar 2026 - Present | Remote</span>
-                    <p class="timeline-text">
-                      Working on production web applications with Next.js, TypeScript, Node.js, and Express.js. I build reusable UI flows,
-                      connect them to reliable API layers, and improve maintainability by keeping features modular, readable, and easier to extend.
-                      I also optimize database queries and backend response paths for high-traffic endpoints, helping live applications feel faster
-                      and more responsive for real users.
-                    </p>
-                  </li>
-
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">MERN Stack Developer Intern - Parashift Technologies Pvt. Ltd.</h4>
-                    <span>Apr 2025 - Oct 2025 | Mumbai, India</span>
-                    <p class="timeline-text">
-                      Built and deployed full-stack MERN features in a production environment, owning both frontend screens and backend APIs.
-                      I created responsive React.js interfaces for a large user base, implemented JWT authentication and Express middleware,
-                      strengthened API security, and improved MongoDB query patterns to reduce average response time by 30%.
-                    </p>
-                  </li>
-
-                </ol>
-
-              </section>
-
-              <!-- Projects Section -->
-              <section class="timeline">
-
-                <div class="title-wrapper">
-                  <div class="icon-box">
-                    <ion-icon name="briefcase-outline"></ion-icon>
-                  </div>
-                  <h3 class="h3">Projects</h3>
-                </div>
-
-                <ol class="timeline-list">
-
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">AdForge - E-commerce Analytics Dashboard</h4>
-                    <span>2026 | React, Node.js, PostgreSQL, Shopify API, Meta Ads API</span>
-                    <p class="timeline-text">
-                      Built a multi-client analytics dashboard that combines Shopify and Meta Ads data into one reporting view for ROAS, CPA,
-                      MER, revenue, and top products. Designed normalized PostgreSQL schemas for products, variants, orders, and daily
-                      aggregations, then added Chart.js visualizations with date filters for scalable client reporting.
-                    </p>
-                  </li>
-
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">DevInsight - AI Code Review Assistant</h4>
-                    <span>2025 | React, Node.js, OpenAI API, MongoDB, Redis</span>
-                    <p class="timeline-text">
-                      Built an AI-powered platform that analyzes GitHub repositories for improvements, security issues, and code smells using
-                      OpenAI APIs. Added Redis caching to reduce repeated analysis calls, improving response time by 40%, and built webhook
-                      integrations for automated pull request feedback.
-                    </p>
-                  </li>
-
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">NutriTrack - Nutrition Tracking Platform</h4>
-                    <span>2026 | React, Node.js, MongoDB, Chart.js</span>
-                    <p class="timeline-text">
-                      Built a full-stack meal tracking app with JWT authentication, meal logging, nutrition history APIs, and macro analytics
-                      dashboards for calories, protein, carbs, and fat trends. Designed MongoDB schemas for time-series queries and daily
-                      aggregation, achieving a Lighthouse performance score above 90.
-                    </p>
-                  </li>
-
-                </ol>
-
-              </section>
-
-              <!-- Resume Download Section -->
-              <section class="resume-cta content-card">
-                <div>
-                  <p class="resume-cta-label">Professional Resume</p>
-                  <h3 class="h3 resume-cta-title">Download my resume</h3>
-                  <p class="resume-cta-text">
-                    View a detailed PDF version of my experience, selected projects, technical skills, certifications, and contact information.
-                  </p>
-                </div>
-
-                <a class="resume-download resume-cta-btn" href="./assets/Ritesh-Yadav-Resume.pdf" download>
-                  <ion-icon name="download-outline"></ion-icon>
-                  <span>Download Resume</span>
-                </a>
-              </section>
-
-      </article>
-
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-          
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
           </div>
 
-          <ul class="project-list">
-
-            <li class="project-item active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="AdForge analytics dashboard" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">AdForge</h3>
-                <p class="project-category">React / Node.js / PostgreSQL</p>
-                <p class="project-summary">
-                  Multi-client e-commerce analytics dashboard for Shopify and Meta Ads reporting, with ROAS, CPA, MER, revenue, top products,
-                  normalized PostgreSQL schemas, and Chart.js visualizations.
-                </p>
-
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="DevInsight AI code review assistant" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DevInsight</h3>
-                <p class="project-category">React / Node.js / OpenAI API</p>
-                <p class="project-summary">
-                  AI code review platform that analyzes GitHub repositories for improvements, security issues, and code smells, with Redis
-                  caching and webhook-based pull request analysis.
-                </p>
-
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="NutriTrack nutrition platform" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">NutriTrack</h3>
-                <p class="project-category">React / Node.js / MongoDB</p>
-                <p class="project-summary">
-                  Full-stack nutrition tracking app with JWT auth, meal logging, nutrition history APIs, macro analytics dashboards,
-                  time-series MongoDB schemas, and high Lighthouse performance.
-                </p>
-
-              </a>
-            </li>
-
+          <ul class="hero-socials reveal" aria-label="Profiles">
+            <li><a href="https://github.com/Ritesh672" target="_blank" rel="noopener" aria-label="GitHub"><i class="devicon-github-original"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/ritesh-yadav672/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a></li>
+            <li><a href="https://leetcode.com/u/Riteshyad962/" target="_blank" rel="noopener" aria-label="LeetCode"><span class="lc">LC</span></a></li>
+            <li><a href="mailto:riteshyad672@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></svg></a></li>
           </ul>
+        </div>
 
-        </section>
+        <div class="hero-visual reveal">
+          <div class="avatar-wrap">
+            <div class="avatar-ring" aria-hidden="true"></div>
+            <img src="./assets/images/my-avatar.png" alt="Ritesh Yadav's avatar" class="avatar" width="210" height="210">
+            <div class="float-chip chip-a"><i class="devicon-python-plain colored"></i> Python</div>
+            <div class="float-chip chip-b"><span class="chip-dot"></span> LangGraph</div>
+            <div class="float-chip chip-c"><i class="devicon-react-original colored"></i> React</div>
+            <div class="float-chip chip-d"><i class="devicon-fastapi-plain colored"></i> FastAPI</div>
+          </div>
 
-      </article>
+          <div class="code-card">
+            <div class="code-head"><span></span><span></span><span></span><em>agent.py</em></div>
+<pre><code><span class="k">graph</span> = StateGraph(ResearchState)
+graph.add_node(<span class="s">"plan"</span>, plan_steps)
+graph.add_node(<span class="s">"tools"</span>, ToolNode(tools))
+graph.add_node(<span class="s">"answer"</span>, write_answer)
+<span class="c"># plan → tools → answer, with memory</span></code></pre>
+          </div>
+        </div>
+      </div>
 
-      
+      <div class="container">
+        <ul class="stats">
+          <li class="stat reveal"><strong><span data-count="12">12</span>+</strong><span>REST APIs shipped to production</span></li>
+          <li class="stat reveal"><strong><span data-count="10000" data-format="comma">10,000</span>+</strong><span>monthly users served by my UIs</span></li>
+          <li class="stat reveal"><strong><span data-count="500">500</span>+</strong><span>documents searchable in my RAG app</span></li>
+          <li class="stat reveal"><strong><span data-count="100">100</span>+</strong><span>LeetCode problems solved</span></li>
+        </ul>
+      </div>
 
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About"><span></span></a>
+    </section>
 
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">01 · About</p>
+          <h2>Engineer who ships the <span class="gradient-text">whole stack</span> around the model.</h2>
+        </div>
 
-      <!--
-        - #skills
-      -->
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I build LLM-powered products end to end: <strong>LangGraph agents</strong>, <strong>RAG pipelines</strong>,
+              <strong>FastAPI</strong> services and <strong>React/Next.js</strong> interfaces.
+            </p>
+            <p>
+              Recently I built a multi-step research agent with tool calling and memory across 5+ tools, and
+              <strong>Aivana</strong>, a full-stack RAG platform on PostgreSQL + pgvector that answers questions
+              over 500+ documents in under 2 seconds.
+            </p>
+            <p>
+              Before that I shipped production software at three companies: 12+ REST APIs, JWT auth and security
+              fixes, CRM workflows over 5,000+ customer records, and UIs serving 10,000+ monthly users.
+            </p>
+            <p class="muted">
+              Studied Computer Science &amp; Engineering at BIT Gorakhpur; largely self-taught. Based in Mumbai,
+              open to remote roles and relocation within India.
+            </p>
+          </div>
 
-  <article class="skills" data-page="skills">
-
-        <header>
-          <h2 class="h2 article-title">Skills</h2>
-        </header>
-
-        <section class="skills-content">
-
-          <ul class="stack-groups">
-
-            <li class="stack-group">
-              <div class="stack-group-header">
-                <ion-icon name="code-slash-outline"></ion-icon>
-                <h3 class="h3 skill-title">Languages</h3>
+          <div class="service-grid">
+            <article class="service card reveal" data-spotlight>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M12 7.2v4.3M12 11.5 6.4 16.3M12 11.5l5.6 4.8"/></svg>
               </div>
-              <ul class="stack-badges">
-                <li><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></li>
-                <li><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></li>
-                <li><i class="devicon-python-plain colored"></i><span>Python</span></li>
-                <li><ion-icon name="server-outline"></ion-icon><span>SQL</span></li>
-                <li><i class="devicon-html5-plain colored"></i><span>HTML5</span></li>
-                <li><i class="devicon-css3-plain colored"></i><span>CSS3</span></li>
-              </ul>
-            </li>
-
-            <li class="stack-group">
-              <div class="stack-group-header">
-                <ion-icon name="desktop-outline"></ion-icon>
-                <h3 class="h3 skill-title">Frontend</h3>
+              <h3>AI agents</h3>
+              <p>Multi-step agents in LangGraph with tool calling, stateful execution and memory.</p>
+            </article>
+            <article class="service card reveal" data-spotlight>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="2.8"/><path d="M5 6v6c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8V6M5 12v6c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8v-6"/></svg>
               </div>
-              <ul class="stack-badges">
-                <li><i class="devicon-react-original colored"></i><span>React.js</span></li>
-                <li><i class="devicon-nextjs-original"></i><span>Next.js</span></li>
-                <li><i class="devicon-redux-original colored"></i><span>Redux</span></li>
-                <li><ion-icon name="git-branch-outline"></ion-icon><span>Hooks</span></li>
-                <li><i class="devicon-tailwindcss-original colored"></i><span>Tailwind</span></li>
-                <li><ion-icon name="stats-chart-outline"></ion-icon><span>Chart.js</span></li>
-              </ul>
-            </li>
-
-            <li class="stack-group">
-              <div class="stack-group-header">
-                <ion-icon name="layers-outline"></ion-icon>
-                <h3 class="h3 skill-title">Backend</h3>
+              <h3>RAG &amp; retrieval</h3>
+              <p>Ingestion, chunking and embeddings into pgvector for grounded, fast answers.</p>
+            </article>
+            <article class="service card reveal" data-spotlight>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>
               </div>
-              <ul class="stack-badges">
-                <li><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></li>
-                <li><i class="devicon-express-original"></i><span>Express.js</span></li>
-                <li><i class="devicon-flask-original"></i><span>Flask APIs</span></li>
-                <li><ion-icon name="swap-horizontal-outline"></ion-icon><span>REST APIs</span></li>
-                <li><ion-icon name="shield-checkmark-outline"></ion-icon><span>JWT Auth</span></li>
-                <li><ion-icon name="speedometer-outline"></ion-icon><span>API Optimization</span></li>
-              </ul>
-            </li>
-
-            <li class="stack-group">
-              <div class="stack-group-header">
-                <ion-icon name="server-outline"></ion-icon>
-                <h3 class="h3 skill-title">Data</h3>
+              <h3>Backend &amp; APIs</h3>
+              <p>FastAPI and Node.js/Express services with JWT auth, streaming and PostgreSQL.</p>
+            </article>
+            <article class="service card reveal" data-spotlight>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9h5M7 12h8"/></svg>
               </div>
-              <ul class="stack-badges">
-                <li><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></li>
-                <li><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></li>
-                <li><i class="devicon-redis-plain colored"></i><span>Redis</span></li>
-                <li><ion-icon name="git-network-outline"></ion-icon><span>Mongoose ODM</span></li>
-                <li><ion-icon name="file-tray-stacked-outline"></ion-icon><span>Schema Design</span></li>
-                <li><ion-icon name="flash-outline"></ion-icon><span>Query Optimization</span></li>
-              </ul>
-            </li>
+              <h3>Full-stack products</h3>
+              <p>React, Next.js and TypeScript interfaces and dashboards that real users rely on.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <li class="stack-group">
-              <div class="stack-group-header">
-                <ion-icon name="construct-outline"></ion-icon>
-                <h3 class="h3 skill-title">Tools</h3>
+    <!-- ============ AGENT PIPELINE ============ -->
+    <section class="section section-alt" id="agent">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">02 · How I build</p>
+          <h2>Inside my <span class="gradient-text">research agent</span></h2>
+          <p class="section-sub">
+            A question goes in, the agent plans its own steps, picks tools, retrieves evidence and returns a
+            structured answer, keeping memory between turns.
+          </p>
+        </div>
+
+        <div class="pipeline reveal" data-pipeline>
+          <svg class="pipeline-lines" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="flow" x1="0" x2="1">
+                <stop offset="0" stop-color="#8b5cf6"/>
+                <stop offset="1" stop-color="#22d3ee"/>
+              </linearGradient>
+            </defs>
+            <path class="track" d="M116 72 H884"/>
+            <path class="flow" d="M116 72 H884"/>
+            <path class="loop" d="M692 40 C680 2, 320 2, 308 40"/>
+          </svg>
+
+          <ol class="steps">
+            <li class="step" data-step><span class="step-num">1</span><span class="step-title">Question</span><span class="step-text">Open-ended research query</span></li>
+            <li class="step" data-step><span class="step-num">2</span><span class="step-title">Plan</span><span class="step-text">Break it into steps</span></li>
+            <li class="step" data-step><span class="step-num">3</span><span class="step-title">Pick a tool</span><span class="step-text">Tool calling across 5+ tools</span></li>
+            <li class="step" data-step><span class="step-num">4</span><span class="step-title">Retrieve</span><span class="step-text">RAG over embeddings</span></li>
+            <li class="step" data-step><span class="step-num">5</span><span class="step-title">Answer</span><span class="step-text">Structured response via FastAPI</span></li>
+          </ol>
+          <p class="memory-note"><span class="chip-dot"></span> Conversational memory carries state between steps and turns</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">03 · Experience</p>
+          <h2>Where I've <span class="gradient-text">shipped</span></h2>
+        </div>
+
+        <ol class="timeline" data-timeline>
+          <li class="tl-item reveal">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card card" data-spotlight>
+              <div class="tl-head">
+                <div>
+                  <h3>Software Developer (Contract)</h3>
+                  <p class="tl-org">Gharpayy · Bengaluru</p>
+                </div>
+                <span class="tl-date">May 2026 – Aug 2026</span>
               </div>
-              <ul class="stack-badges">
-                <li><i class="devicon-git-plain colored"></i><span>Git</span></li>
-                <li><i class="devicon-github-original"></i><span>GitHub</span></li>
-                <li><i class="devicon-docker-plain colored"></i><span>Docker</span></li>
-                <li><ion-icon name="rocket-outline"></ion-icon><span>Vercel</span></li>
-                <li><ion-icon name="cloud-outline"></ion-icon><span>Render</span></li>
-                <li><ion-icon name="repeat-outline"></ion-icon><span>CI/CD</span></li>
+              <ul>
+                <li>Developed and maintained CRM modules for lead tracking and customer data, supporting a <b>sales team of 15</b> in production.</li>
+                <li>Built backend workflows across <b>5,000+ customer records</b>, <b>cutting manual entry by 35%</b>.</li>
+                <li>Debugged existing functionality with cross-functional teams, <b>resolving 30+ production issues</b>.</li>
               </ul>
-            </li>
+            </div>
+          </li>
 
-            <li class="stack-group">
-              <div class="stack-group-header">
-                <ion-icon name="sparkles-outline"></ion-icon>
-                <h3 class="h3 skill-title">Strengths</h3>
+          <li class="tl-item reveal">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card card" data-spotlight>
+              <div class="tl-head">
+                <div>
+                  <h3>Full-Stack Developer Intern</h3>
+                  <p class="tl-org">RD Group of Industries · Remote</p>
+                </div>
+                <span class="tl-date">Feb 2026 – Apr 2026</span>
               </div>
-              <ul class="stack-badges">
-                <li><ion-icon name="people-outline"></ion-icon><span>Agile Delivery</span></li>
-                <li><ion-icon name="link-outline"></ion-icon><span>API Integration</span></li>
-                <li><ion-icon name="bar-chart-outline"></ion-icon><span>Dashboards</span></li>
-                <li><ion-icon name="timer-outline"></ion-icon><span>Performance</span></li>
-                <li><ion-icon name="cloud-done-outline"></ion-icon><span>Cloud Basics</span></li>
+              <ul>
+                <li>Built and deployed full-stack applications across <b>5+ client projects</b> with React.js, TypeScript, Node.js and Python backend services.</li>
+                <li>Developed reusable React and TypeScript components, forms and dashboards, <b>increasing user engagement by 24%</b>.</li>
+                <li>Integrated REST APIs with authentication middleware, <b>reducing runtime issues by 40%</b>.</li>
               </ul>
-            </li>
+            </div>
+          </li>
 
+          <li class="tl-item reveal">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card card" data-spotlight>
+              <div class="tl-head">
+                <div>
+                  <h3>Full Stack Engineer</h3>
+                  <p class="tl-org">Parashift Technologies · Mumbai</p>
+                </div>
+                <span class="tl-date">Apr 2025 – Oct 2025</span>
+              </div>
+              <ul>
+                <li>Owned <b>3+ production MERN features</b> end to end: React.js frontends, Node.js/Express APIs and MongoDB data layers.</li>
+                <li>Developed <b>12+ REST APIs</b>, implemented JWT authentication and fixed API security vulnerabilities.</li>
+                <li>Optimized database queries, <b>cutting response time by 30%</b> behind UIs serving <b>10,000+ monthly users</b>.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">04 · Projects</p>
+          <h2>Things I've <span class="gradient-text">built</span></h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project card featured reveal" data-tilt data-spotlight>
+            <div class="project-visual v-rag" aria-hidden="true">
+              <div class="doc d1"></div><div class="doc d2"></div><div class="doc d3"></div>
+              <div class="vec"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="answer">Grounded answer · &lt;2s</div>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">RAG platform · Featured</p>
+              <h3>AI Document Intelligence Platform <span class="muted">(Aivana)</span></h3>
+              <ul>
+                <li>Extracts PDF text, chunks it and stores Hugging Face embeddings in PostgreSQL + pgvector for Q&amp;A over <b>500+ documents</b>.</li>
+                <li>RAG with vector search behind a model-agnostic LLM layer (OpenAI, Anthropic, Gemini via LangChain), answering in <b>under 2 seconds</b>.</li>
+                <li>FastAPI routes for ingestion, chats and streaming responses, secured with JWT, behind a React + Vite frontend.</li>
+              </ul>
+              <div class="chips"><span>FastAPI</span><span>LangChain</span><span>pgvector</span><span>Hugging Face</span><span>React</span></div>
+              <div class="project-links">
+                <a href="https://github.com/Ritesh672/Aivana" target="_blank" rel="noopener" class="link-arrow">View on GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project card reveal" data-tilt data-spotlight>
+            <div class="project-visual v-agent" aria-hidden="true">
+              <svg viewBox="0 0 300 140" preserveAspectRatio="none"><path d="M55 45 H245 V100 H55"/></svg>
+              <span class="node n1">plan</span><span class="node n2">tools</span><span class="node n3">retrieve</span><span class="node n4">answer</span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">AI agent</p>
+              <h3>Agentic Research Assistant</h3>
+              <ul>
+                <li>Breaks open-ended research questions into steps, selects tools, retrieves information and returns structured answers.</li>
+                <li>Tool-calling and retrieval workflows in LangGraph with stateful execution and memory across <b>5+ tools</b>.</li>
+                <li>Exposed through FastAPI endpoints so other apps can run multi-step research workflows.</li>
+              </ul>
+              <div class="chips"><span>LangGraph</span><span>LangChain</span><span>OpenAI</span><span>RAG</span><span>FastAPI</span></div>
+            </div>
+          </article>
+
+          <article class="project card reveal" data-tilt data-spotlight>
+            <div class="project-visual v-chart" aria-hidden="true">
+              <div class="bars"><span style="--h:45%"></span><span style="--h:70%"></span><span style="--h:55%"></span><span style="--h:85%"></span><span style="--h:65%"></span><span style="--h:92%"></span><span style="--h:75%"></span></div>
+              <div class="ring"><span>100+<small>users</small></span></div>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Full-stack · AI</p>
+              <h3>NutriTrack</h3>
+              <ul>
+                <li>Nutrition platform with meal tracking, macro analytics, onboarding and personalized insights for <b>100+ users</b>.</li>
+                <li>AI meal analysis with the Gemini API; secure user workflows with JWT, bcrypt and PostgreSQL on Node.js/Express.</li>
+                <li>Interactive Recharts dashboards in React for nutrition goals and daily progress.</li>
+              </ul>
+              <div class="chips"><span>React</span><span>Recharts</span><span>Node.js</span><span>PostgreSQL</span><span>Gemini</span></div>
+              <div class="project-links">
+                <a href="https://github.com/Ritesh672/meal-track" target="_blank" rel="noopener" class="link-arrow">View on GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project card reveal" data-tilt data-spotlight>
+            <div class="project-visual v-auto" aria-hidden="true">
+              <div class="term">
+                <p><span class="k">$</span> apply --filters ai,remote</p>
+                <p class="ok">✓ form filled · answer drafted</p>
+                <p class="ok">✓ logged to dashboard</p>
+                <p class="dim">200+ applications run</p>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Automation</p>
+              <h3>AI Job Application Automation</h3>
+              <ul>
+                <li>Extended the open-source "LinkedIn Auto Job Applier" with configuration cleanup, workflow updates and a Flask tracking dashboard.</li>
+                <li>OpenAI-generated answers to free-text questions, with application history and CSV exports.</li>
+                <li>Used it to run <b>200+ applications</b> in my own job search.</li>
+              </ul>
+              <div class="chips"><span>Python</span><span>Selenium</span><span>Flask</span><span>OpenAI</span></div>
+              <div class="project-links">
+                <a href="https://github.com/Ritesh672/auto-job-apply" target="_blank" rel="noopener" class="link-arrow">View on GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">05 · Skills</p>
+          <h2>My <span class="gradient-text">toolkit</span></h2>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span><i class="devicon-python-plain colored"></i>Python</span>
+          <span><i class="devicon-typescript-plain colored"></i>TypeScript</span>
+          <span><i class="devicon-fastapi-plain colored"></i>FastAPI</span>
+          <span><span class="glyph">⛓</span>LangChain</span>
+          <span><span class="glyph">◈</span>LangGraph</span>
+          <span><i class="devicon-react-original colored"></i>React</span>
+          <span><i class="devicon-nextjs-plain"></i>Next.js</span>
+          <span><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+          <span><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
+          <span><i class="devicon-mongodb-plain colored"></i>MongoDB</span>
+          <span><i class="devicon-tailwindcss-original colored"></i>Tailwind</span>
+          <span><i class="devicon-git-plain colored"></i>Git</span>
+          <span><i class="devicon-linux-plain"></i>Linux</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="skill-grid">
+          <div class="skill-group card reveal" data-spotlight>
+            <h3><span class="sg-dot"></span>Agentic AI</h3>
+            <ul class="tags"><li>LangGraph</li><li>LangChain</li><li>Tool calling</li><li>Multi-step agents</li><li>Stateful workflows</li><li>Conversational memory</li><li>Prompt engineering</li></ul>
+          </div>
+          <div class="skill-group card reveal" data-spotlight>
+            <h3><span class="sg-dot"></span>Generative AI</h3>
+            <ul class="tags"><li>RAG</li><li>Embeddings</li><li>pgvector</li><li>Semantic search</li><li>OpenAI</li><li>Anthropic</li><li>Gemini</li><li>Streaming responses</li></ul>
+          </div>
+          <div class="skill-group card reveal" data-spotlight>
+            <h3><span class="sg-dot"></span>Backend</h3>
+            <ul class="tags"><li>Python</li><li>FastAPI</li><li>Flask</li><li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>JWT auth</li></ul>
+          </div>
+          <div class="skill-group card reveal" data-spotlight>
+            <h3><span class="sg-dot"></span>Frontend</h3>
+            <ul class="tags"><li>TypeScript</li><li>React.js</li><li>Next.js</li><li>Vite</li><li>Tailwind CSS</li><li>Recharts</li></ul>
+          </div>
+          <div class="skill-group card reveal" data-spotlight>
+            <h3><span class="sg-dot"></span>Data &amp; tools</h3>
+            <ul class="tags"><li>PostgreSQL</li><li>MongoDB</li><li>SQL</li><li>Git &amp; GitHub</li><li>Linux/Bash</li><li>Postman</li><li>AWS (basic)</li></ul>
+          </div>
+          <div class="skill-group card reveal" data-spotlight>
+            <h3><span class="sg-dot"></span>Learning</h3>
+            <ul class="tags"><li>CSE · BIT Gorakhpur</li><li>Full-Stack Web Dev Bootcamp (cert.)</li><li>Anthropic GenAI course</li><li>LangChain course</li><li>100+ LeetCode</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">06 · Contact</p>
+          <h2>Let's build something <span class="gradient-text">intelligent</span>.</h2>
+          <p class="section-sub">
+            I'm open to AI engineer, GenAI and backend roles. Email is the fastest way to reach me.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="cl-label">Email</span>
+              <a href="mailto:riteshyad672@gmail.com">riteshyad672@gmail.com</a>
+              <button class="copy-btn" type="button" data-copy="riteshyad672@gmail.com" aria-label="Copy email address">Copy</button>
+            </li>
+            <li><span class="cl-label">Phone</span><a href="tel:+919664412018">+91 96644 12018</a></li>
+            <li><span class="cl-label">Location</span><span>Mumbai, India · remote-friendly</span></li>
           </ul>
+        </div>
 
-        </section>
+        <form class="contact-form card reveal" action="https://formsubmit.co/riteshyad672@gmail.com" method="POST" data-form>
+          <input type="hidden" name="_subject" value="New portfolio contact message">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-</article>
+          <div class="field-row">
+            <label class="field">
+              <input type="text" name="name" placeholder=" " required autocomplete="name">
+              <span>Full name</span>
+            </label>
+            <label class="field">
+              <input type="email" name="email" placeholder=" " required autocomplete="email">
+              <span>Email address</span>
+            </label>
+          </div>
+          <label class="field">
+            <input type="text" name="subject" placeholder=" " required>
+            <span>Subject</span>
+          </label>
+          <label class="field">
+            <textarea name="message" rows="5" placeholder=" " required></textarea>
+            <span>Your message</span>
+          </label>
 
-
-
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-        <article class="contact" data-page="contact">
-
-                  <header>
-                    <h2 class="h2 article-title">Contact</h2>
-                  </header>
-
-                  <section class="mapbox" data-mapbox>
-                    <figure>
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.075516635073!2d77.5945621!3d12.9715987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c57ae491%3A0x7df4d0f2b9e5c50d!2sBengaluru%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1693149482352!5m2!1sen!2sin"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                      </iframe>
-                    </figure>
-                  </section>
-
-                  <section class="contact-form">
-
-                    <h3 class="h3 form-title">Contact Form</h3>
-
-                       <form action="https://formsubmit.co/riteshyad672@gmail.com" method="POST" data-form>
-
-                      <input type="hidden" name="_subject" value="New portfolio contact message">
-                      <input type="hidden" name="_template" value="table">
-                      <input type="hidden" name="_captcha" value="false">
-                      <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off">
-
-                      <div class="input-wrapper">
-                        <input type="text" name="name" class="form-input" placeholder="Full name" required data-form-input>
-
-                        <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-                      </div>
-
-                      <div class="input-wrapper">
-                        <input type="tel" name="phone" class="form-input" placeholder="Phone number" data-form-input>
-
-                        <input type="text" name="subject" class="form-input" placeholder="Subject" required data-form-input>
-                      </div>
-
-                      <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-                          <button class="form-btn" type="submit" disabled data-form-btn>
-                            <ion-icon name="paper-plane"></ion-icon>
-                            <span>Send Message</span>
-                          </button>
-
-
-                    </form>
-
-                  </section>
-
-        </article>
-
-
-    </div>
-
+          <button class="btn btn-primary btn-block magnetic" type="submit" data-form-btn>
+            <span data-btn-label>Send message</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 20 4l-6 16-3-7-7-1Z"/></svg>
+          </button>
+          <p class="form-status" role="status" data-form-status></p>
+        </form>
+      </div>
+    </section>
   </main>
 
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Ritesh Yadav. Built by hand with HTML, CSS &amp; JS.</p>
+      <a href="#top" class="link-arrow">Back to top <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+    </div>
+  </footer>
 
-
-
-
-
-  <!--
-    - custom js link
-  -->
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>
