@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ritesh Yadav · AI &amp; Backend Engineer</title>
   <meta name="description" content="Ritesh Yadav is a software engineer who builds LLM products end to end: LangGraph agents, RAG pipelines, FastAPI services and React/Next.js interfaces.">
-  <meta name="theme-color" content="#07080d">
+  <meta name="theme-color" content="#F3EDE3">
   <meta property="og:title" content="Ritesh Yadav · AI &amp; Backend Engineer">
   <meta property="og:description" content="LangGraph agents, RAG pipelines, FastAPI services and React/Next.js interfaces.">
   <meta property="og:type" content="website">
@@ -14,7 +14,7 @@
   <link rel="icon" href="./assets/images/logo.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -30,7 +30,8 @@
 
 <body>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
-  <div class="cursor-glow" aria-hidden="true"></div>
+  <canvas class="scene" data-scene aria-hidden="true"></canvas>
+  <div class="cursor" aria-hidden="true"><span class="cursor-ring"><em data-cursor-label></em></span><span class="cursor-dot"></span></div>
 
   <!-- ============ NAV ============ -->
   <header class="nav" data-nav>
@@ -64,10 +65,6 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero">
-      <canvas class="hero-canvas" data-network aria-hidden="true"></canvas>
-      <div class="hero-orb orb-1" aria-hidden="true"></div>
-      <div class="hero-orb orb-2" aria-hidden="true"></div>
-
       <div class="container hero-inner">
         <div class="hero-copy">
           <p class="status-pill reveal">
@@ -76,7 +73,7 @@
           </p>
 
           <h1 class="hero-title reveal">
-            Hi, I'm <span class="gradient-text">Ritesh Yadav</span>
+            Hi, I'm <em class="hl">Ritesh Yadav</em>
           </h1>
 
           <p class="hero-role reveal">
@@ -147,7 +144,7 @@ graph.add_node(<span class="s">"answer"</span>, write_answer)
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">01 · About</p>
-          <h2>Engineer who ships the <span class="gradient-text">whole stack</span> around the model.</h2>
+          <h2>Engineer who ships the <em class="hl">whole stack</em> around the model.</h2>
         </div>
 
         <div class="about-grid">
@@ -210,7 +207,7 @@ graph.add_node(<span class="s">"answer"</span>, write_answer)
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">02 · How I build</p>
-          <h2>Inside my <span class="gradient-text">research agent</span></h2>
+          <h2>Inside my <em class="hl">research agent</em></h2>
           <p class="section-sub">
             A question goes in, the agent plans its own steps, picks tools, retrieves evidence and returns a
             structured answer, keeping memory between turns.
@@ -221,8 +218,8 @@ graph.add_node(<span class="s">"answer"</span>, write_answer)
           <svg class="pipeline-lines" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
             <defs>
               <linearGradient id="flow" x1="0" x2="1">
-                <stop offset="0" stop-color="#8b5cf6"/>
-                <stop offset="1" stop-color="#22d3ee"/>
+                <stop offset="0" stop-color="#C8553D"/>
+                <stop offset="1" stop-color="#8A9A7B"/>
               </linearGradient>
             </defs>
             <path class="track" d="M116 72 H884"/>
@@ -247,7 +244,7 @@ graph.add_node(<span class="s">"answer"</span>, write_answer)
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">03 · Experience</p>
-          <h2>Where I've <span class="gradient-text">shipped</span></h2>
+          <h2>Where I've <em class="hl">shipped</em></h2>
         </div>
 
         <ol class="timeline" data-timeline>
@@ -313,11 +310,11 @@ graph.add_node(<span class="s">"answer"</span>, write_answer)
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">04 · Projects</p>
-          <h2>Things I've <span class="gradient-text">built</span></h2>
+          <h2>Things I've <em class="hl">built</em></h2>
         </div>
 
         <div class="project-grid">
-          <article class="project card featured reveal" data-tilt data-spotlight>
+          <article class="project card featured reveal" data-tilt data-spotlight data-cursor="Open">
             <div class="project-visual v-rag" aria-hidden="true">
               <div class="doc d1"></div><div class="doc d2"></div><div class="doc d3"></div>
               <div class="vec"><span></span><span></span><span></span><span></span><span></span><span></span></div>
@@ -338,7 +335,7 @@ graph.add_node(<span class="s">"answer"</span>, write_answer)
             </div>
           </article>
 
-          <article class="project card reveal" data-tilt data-spotlight>
+          <article class="project card reveal" data-tilt data-spotlight data-cursor="Open">
             <div class="project-visual v-agent" aria-hidden="true">
               <svg viewBox="0 0 300 140" preserveAspectRatio="none"><path d="M55 45 H245 V100 H55"/></svg>
               <span class="node n1">plan</span><span class="node n2">tools</span><span class="node n3">retrieve</span><span class="node n4">answer</span>
@@ -355,7 +352,7 @@ graph.add_node(<span class="s">"answer"</span>, write_answer)
             </div>
           </article>
 
-          <article class="project card reveal" data-tilt data-spotlight>
+          <article class="project card reveal" data-tilt data-spotlight data-cursor="Open">
             <div class="project-visual v-chart" aria-hidden="true">
               <div class="bars"><span style="--h:45%"></span><span style="--h:70%"></span><span style="--h:55%"></span><span style="--h:85%"></span><span style="--h:65%"></span><span style="--h:92%"></span><span style="--h:75%"></span></div>
               <div class="ring"><span>100+<small>users</small></span></div>
@@ -375,7 +372,7 @@ graph.add_node(<span class="s">"answer"</span>, write_answer)
             </div>
           </article>
 
-          <article class="project card reveal" data-tilt data-spotlight>
+          <article class="project card reveal" data-tilt data-spotlight data-cursor="Open">
             <div class="project-visual v-auto" aria-hidden="true">
               <div class="term">
                 <p><span class="k">$</span> apply --filters ai,remote</p>
@@ -407,7 +404,7 @@ graph.add_node(<span class="s">"answer"</span>, write_answer)
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">05 · Skills</p>
-          <h2>My <span class="gradient-text">toolkit</span></h2>
+          <h2>My <em class="hl">toolkit</em></h2>
         </div>
       </div>
 
@@ -464,7 +461,7 @@ graph.add_node(<span class="s">"answer"</span>, write_answer)
       <div class="container contact-grid">
         <div class="contact-copy reveal">
           <p class="eyebrow">06 · Contact</p>
-          <h2>Let's build something <span class="gradient-text">intelligent</span>.</h2>
+          <h2>Let's build something <em class="hl">intelligent</em>.</h2>
           <p class="section-sub">
             I'm open to AI engineer, GenAI and backend roles. Email is the fastest way to reach me.
           </p>
@@ -522,6 +519,7 @@ graph.add_node(<span class="s">"answer"</span>, write_answer)
     </div>
   </footer>
 
-  <script src="./assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="./assets/js/script.js" defer></script>
 </body>
 </html>
